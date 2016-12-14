@@ -2,31 +2,11 @@
 //
 
 #include "stdafx.h"
-#include <iostream>
-#include <string>
-
-class helloworld {
-private:
-	std::string eyo;
-public:
-	virtual void call();
-	helloworld(std::string str){
-		eyo = str;
-	}
-	helloworld(){
-		eyo = "Steve";
-	}
-	~helloworld(){
-		std::cout << "!\n";
-	}
-};
-
-void helloworld::call(){
-	std::cout << "Hello " << eyo;
-}
+#include "helloworld.h"
 
 int _tmain(int argc, _TCHAR* argv[])
 {
+
 	helloworld * hworld = new helloworld("World");
 	hworld->call();
 	delete hworld;
